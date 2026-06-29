@@ -1,10 +1,55 @@
 allow_embedding: false
-name: Material Design 1
-package_name: Material_Design_1
+db_schema:
+  articles:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: title
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: content
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: images
+      type: media
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: created
+      type: datetime
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: false
+      name: updated
+      type: datetime
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: categories
+      target: categories
+      type: link_multiple
+    indexes: []
+    server: full
+    title: Articles
+  categories:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: name
+      type: string
+    indexes: []
+    server: full
+    title: Categories
+name: News App
+package_name: News_App
 runtime_options:
   client_version: '3'
   legacy_features: {bootstrap3: true, class_names: true}
   server_spec: {base: python310-minimal}
   version: 3
-services: []
+services:
+- client_config: {enable_v2: true}
+  server_config: {}
+  source: /runtime/services/tables.yml
 startup_form: Form1

@@ -11,3 +11,16 @@ class ArticleEdit(ArticleEditTemplate):
     super().__init__(**properties)
 
     # Any code you write here will run before the form opens.
+
+    self.categories = [
+      (cat['name'], cat) for cat in app_tables.categories.search()
+    ]
+
+    self.category_box.items = self.categories
+
+  @handle("category_box", "change")
+  def category_box_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass  # Write Code Here
+
+    

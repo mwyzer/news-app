@@ -52,5 +52,5 @@ services:
 - client_config: {enable_v2: true}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: Homepage, type: form}
+startup: {module: ArticleEdit, type: form}
 startup_form: null

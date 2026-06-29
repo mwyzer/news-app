@@ -7,4 +7,5 @@ unique_ids:
     Homepage: F5E2L3CNIU3XZLRV7FKV35CCUULDUX6X
   modules: {}
   scripts: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1782756400895851471194277.437'
